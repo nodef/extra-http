@@ -10,7 +10,7 @@ function getJson(url, opt) {
 }
 // Get text response (body) from URL.
 function getBody(url, opt, fn) {
-  var req = https.request(url, opt||{}, res => {
+  var req = request(url, opt||{}, res => {
     var code = res.statusCode, body = '';
     if(code>=400) { res.resume(); return fn(new Error(`Request to ${url} returned ${code}`)); }
     if(code>=300 && code<400) return getBody(res.headers.location, opt, fn);
@@ -38,4 +38,4 @@ function getProtocol(url, opt) {
   if(url.includes(':')) return url.substring(0, url.indexOf(':')+1);
   return 'http:';
 }
-module.exports = Object.assign({}, http, {request, get});
+module.exports = Object.assign({}, http, {request, get, getBody, getJson});
