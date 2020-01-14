@@ -1,0 +1,23 @@
+{
+  "name": "extra-http",
+  "version": "0.0.1",
+  "description": "TBD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-http.git"
+  },
+  "keywords": [
+    "extra",
+    "http"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/extra-http/issues"
+  },
+  "homepage": "https://github.com/nodef/extra-http#readme"
+}
