@@ -1,3 +1,6 @@
+const http = require('http');
+const https = require('https');
+
 
 // Get JSON response from URL.
 function getJson(url, opt) {
@@ -18,3 +21,21 @@ function getBody(url, opt, fn) {
   req.on('error', fn);
   req.end();
 }
+
+function get(url, opt, fn) {
+  var protocol = getProtocol(url, opt);
+  return protocol==='http:'? http.get(url, opt, fn) : https.get(url, opt, fn);
+}
+
+function request(url, opt, fn) {
+  var protocol = getProtocol(url, opt);
+  return protocol==='http:'? http.request(url, opt, fn) : https.request(url, opt, fn);
+}
+
+function getProtocol(url, opt) {
+  if(typeof opt==='object' && opt) return opt.protocol;
+  if(typeof url==='object') return url.protocol;
+  if(url.includes(':')) return url.substring(0, url.indexOf(':')+1);
+  return 'http:';
+}
+module.exports = Object.assign({}, http, {request, get});
