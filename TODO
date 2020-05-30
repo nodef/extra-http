@@ -1,1 +1,10 @@
 serve-json	host?	A mock server for any kind of JSON file
+node-vcr	http	Record your test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurate tests
+request-as-bluebird	http	promise wrapper for the npm request package
+breakrequest	http	BREAK IS AN EASY LIBRARY TO MAKE AUTOMATICALLY REQUEST ON SERVER WITHEOUT ERROR!
+npm-proxy-cache	http	HTTP/HTTPS caching proxy for work with `npm` utility / registry
+express-with-decorators	http	NPM: https://www.npmjs.com/package/express-with-decorators
+taulukko-common-http-server	http	Taulukko Commons HTTP Server Utils
+taulukko-common-rest-client	http	Taulukko Commons Rest Client
+express-requestprocessor	http	NPM Module that automatically loads Services from a specific and serves them using express.
+cav-xhr-profiler	http	Library to profile XHR calls in js environment
